@@ -16,18 +16,18 @@ $total=ProductController::cart_count();
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Order</a>
+        <a class="nav-link" href="/myorder">Order</a>
       </li>
    
-      <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" name="query" type="search" placeholder="Search" aria-label="Search">
+      <form class="form-inline my-2  ml-5">
+      <input class="form-control  col-md-10" name="query" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
     <li class="nav-item">
-      <a class="dropdown-item" href="#">Cart({{$total}})</a> 
+      <a class="dropdown-item" href="/cartlist">Cart({{$total}})</a> 
       </li>
           @if(Session::has('user'))
        <li class="nav-item dropdown float-right">
@@ -42,6 +42,7 @@ $total=ProductController::cart_count();
     @else
       <li class="nav-item">
           <a class="dropdown-item" href="/login">Login</a>
+          <a class="dropdown-item" href="/register">Register</a>
       </li>
     @endif
     
