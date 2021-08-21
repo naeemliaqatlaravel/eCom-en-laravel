@@ -4,16 +4,18 @@
 	<meta charset="utf-8">
 	<title>@yield('title')</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" >
 </head>
 <body>
 	{{View::make('header')}}
 @yield('content')
 {{View::make('footer')}}
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="{{asset('assets/js/jquery.js')}}"></script>
+  <script src="{{asset('assets/js/popper.js')}}"></script>
+  <script src="{{asset('assets/js/popper.js.map')}}"></script>
+  <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+  <script src="{{asset('assets/js/bootstrap.min.js.map')}}"></script>
 </body>
 </html>

@@ -17,7 +17,11 @@
 		
 			<div class="row my-5">
 		<div class="col-md-3">
-			<button class="btn btn-success"> Add To Cart</button>
+			<form method="POST" action="/add_to_cart">
+				@csrf
+				<input type="hidden" name="product_id" value="{{$product['id']}}">
+				<button  class="btn btn-success"> Add To Cart</button>
+			</form>
 		</div>
 		<div class="col-md-3">
 		<button class="btn btn-primary"> Buy Now</button>

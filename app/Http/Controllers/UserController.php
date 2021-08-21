@@ -20,6 +20,7 @@ class UserController extends Controller
         }
         else
         {
+            //$user_id=User::find('id');
             $req->session()->put('user',$user);
             return redirect('/');
             
